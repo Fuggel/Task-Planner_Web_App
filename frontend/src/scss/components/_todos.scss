@@ -1,0 +1,46 @@
+@import "../app";
+
+.input-container {
+  display: flex;
+  text-align: center;
+}
+
+.todo-item {
+  @include box-shadow;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 16px;
+  border-left: 3px solid $colorPrimary;
+
+  p {
+    width: 75%;
+    cursor: pointer;
+    font: $fontLarge;
+
+    &:focus {
+      cursor: text;
+      color: #000;
+      outline: 1px solid #000;
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+  }
+}
+
+.remaining-todos {
+  font: $fontHeader;
+  text-align: center;
+}
+
+.no-todos {
+  text-align: center;
+  font: $fontLarge;
+}

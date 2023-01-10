@@ -1,0 +1,50 @@
+@import "../app";
+
+.dashboard-container,
+.no-auth-container {
+  @include box-shadow;
+
+  max-width: 800px;
+  height: 100vh;
+  margin: 50px auto auto auto;
+  background-color: $colorSecondary;
+  padding: 25px;
+  overflow-y: auto;
+
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 35px;
+  }
+}
+
+.no-auth-container {
+  text-align: center;
+  height: auto;
+  width: 500px;
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+
+    .nav-link {
+      border: none;
+
+      button {
+        padding: 8px 20px;
+        border-radius: 0 !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .no-auth-container {
+    max-width: 350px;
+  }
+}

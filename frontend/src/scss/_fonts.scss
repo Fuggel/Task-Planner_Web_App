@@ -1,0 +1,16 @@
+$fontFamily: sans-serif;
+
+// LARGE
+$fontXLarge: bold 28px/34px $fontFamily;
+$fontHeader: bold 18px/26px $fontFamily;
+$fontLarge: normal 18px/26px $fontFamily;
+
+// MEDIUM
+$fontNormalBold: bold 16px/18px $fontFamily;
+$fontNormal: normal 16px/18px $fontFamily;
+
+// SMALL
+$fontSmall: normal 14px/16px $fontFamily;
+
+// ERROR
+$fontError: bold 16px/16px $fontFamily;

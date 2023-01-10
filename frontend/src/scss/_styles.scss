@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: $fontNormal;
+  background-color: $colorPrimary;
+}
+
+input {
+  @include border-black;
+
+  width: 100%;
+  padding: 0 10px;
+  font: $fontNormal;
+  outline: none;
+  height: 40px;
+  margin-bottom: 25px;
+}
+
+button,
+input[type="submit"] {
+  @include transition;
+  @include border-black;
+
+  flex: 1;
+  margin-left: -1px;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: #000;
+  font: $fontNormal;
+  background-color: #fff;
+
+  &:hover {
+    background-color: $colorBtnHover;
+  }
+}
+
+.cta {
+  background-color: $colorCta;
+
+  &:hover {
+    background-color: $colorCtaHover;
+  }
+
+  svg {
+    color: #fff;
+  }
+}
+
+.error-msg {
+  color: $colorError;
+  font: $fontError;
+  text-align: left;
+}

@@ -1,0 +1,42 @@
+@import "../app";
+
+.auth-container {
+  @include absolute-center;
+  @include box-shadow;
+  @include border-radius;
+
+  background-color: $colorSecondary;
+  width: 500px;
+  padding: 25px;
+
+  h2 {
+    font: $fontXLarge;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .input-container {
+    display: block;
+    margin-top: 20px;
+
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      height: 40px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+    }
+  }
+
+  .switch-status {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .auth-container {
+    max-width: 350px;
+  }
+}
