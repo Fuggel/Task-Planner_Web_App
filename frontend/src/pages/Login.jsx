@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/auth-context";
 import axios from "axios";
+import { API_URL } from "../helper/constants";
 import "../scss/pages/_auth.scss";
 
 const Login = () => {
@@ -22,7 +23,7 @@ const Login = () => {
     }
 
     axios
-      .post("http://localhost:5000/users/login", {
+      .post(`${API_URL}users/login`, {
         email,
         password,
       })

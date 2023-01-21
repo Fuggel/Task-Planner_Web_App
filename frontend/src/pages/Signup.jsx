@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth-context";
 import axios from "axios";
+import { API_URL } from "../helper/constants";
 import "../scss/pages/_auth.scss";
 
 const Signup = () => {
@@ -23,7 +24,7 @@ const Signup = () => {
     }
 
     axios
-      .post("http://localhost:5000/users", {
+      .post(`${API_URL}users`, {
         name,
         email,
         password,

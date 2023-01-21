@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { API_URL } from "../helper/constants";
 import { AuthContext } from "../context/auth-context";
 import Todos from "../components/Todos";
 import "../scss/pages/_dashboard.scss";
@@ -12,7 +13,7 @@ const Dashboard = () => {
   useEffect(() => {
     if (isLoggedIn) {
       axios
-        .get("http://localhost:5000/users/me", {
+        .get(`${API_URL}users/me`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => setName(res.data.name))

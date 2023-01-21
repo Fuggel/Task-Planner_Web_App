@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import { API_URL } from "../helper/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { AuthContext } from "../context/auth-context";
@@ -18,7 +19,7 @@ const Todos = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/todos", {
+      .get(`${API_URL}todos`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setTodos(res.data))
@@ -32,7 +33,7 @@ const Todos = () => {
 
     axios
       .post(
-        "http://localhost:5000/todos",
+        `${API_URL}todos`,
         {
           text,
           id: userId,
@@ -48,7 +49,7 @@ const Todos = () => {
 
     axios
       .put(
-        `http://localhost:5000/todos/${id}`,
+        `${API_URL}todos/${id}`,
         { text: updateText },
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -57,7 +58,7 @@ const Todos = () => {
 
   const deleteTodo = (id) => {
     axios
-      .delete(`http://localhost:5000/todos/${id}`, {
+      .delete(`${API_URL}todos/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .catch((err) => console.log(err));
