@@ -13,13 +13,14 @@
   justify-content: space-between;
   background-color: #fff;
   margin: 20px auto;
-  padding: 16px;
+  padding: 15px 20px 15px 15px;
   border-left: 3px solid $colorPrimary;
 
   p {
     width: 75%;
     cursor: pointer;
     font: $fontLarge;
+    padding-left: 5px;
 
     &:focus {
       cursor: text;
@@ -37,6 +38,7 @@
 
 .remaining-todos {
   font: $fontHeader;
+  font-size: 1.5rem;
   text-align: center;
 }
 
