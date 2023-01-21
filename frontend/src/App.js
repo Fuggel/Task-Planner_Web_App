@@ -14,13 +14,13 @@ const App = () => {
   const autoLogout = () => {
     setIsLoggedIn(false);
     localStorage.clear();
-    window.location.reload();
   };
 
   useEffect(() => {
     if (token) setIsLoggedIn(true);
-    if (isLoggedIn) setTimeout(() => autoLogout(), 1000 * 60 * 120);
-  }, [token, isLoggedIn]);
+  }, [token]);
+
+  if (isLoggedIn) setTimeout(() => autoLogout(), 1000 * 60 * 120);
 
   return (
     <AuthContext.Provider
