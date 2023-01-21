@@ -14,6 +14,7 @@ const App = () => {
   const autoLogout = () => {
     setIsLoggedIn(false);
     localStorage.clear();
+    window.location.reload();
   };
 
   useEffect(() => {
